@@ -1,6 +1,79 @@
-# Prompt → 3D
+# 🚀 Prompt → 3D AI
 
-Generate interactive 3D models from a text prompt. Type a description, hit **Generate**, and inspect the result in a real-time Three.js viewer.
+> **Generate high-quality 3D models directly from natural language using Stable Diffusion XL and Tencent Hunyuan3D.**
+
+Prompt → 3D is a full-stack AI application that transforms a simple text prompt into an interactive **3D GLB model**. The system first generates a high-quality 2D image using **Stable Diffusion XL (SDXL)** and then converts that image into a detailed 3D mesh using **Tencent Hunyuan3D-2.1**. The generated model is displayed in real time through an interactive **Three.js** viewer, allowing users to inspect, rotate, and zoom the final result directly in the browser.
+
+The project is designed with a modern client-server architecture using **React**, **FastAPI**, and a dedicated **GPU inference pipeline**, making it suitable for research, rapid prototyping, and production-ready AI applications.
+
+---
+
+## ✨ Key Features
+
+- 📝 Generate 3D models from natural language prompts
+- 🎨 AI-powered image generation with Stable Diffusion XL
+- 🧊 Image-to-3D conversion using Tencent Hunyuan3D-2.1
+- 🌐 Interactive Three.js 3D viewer
+- ⚡ FastAPI backend with asynchronous job processing
+- 📊 Real-time generation status tracking
+- 🔐 User authentication and generation history
+- ☁️ Optional Cloudflare R2 object storage
+- 🗄️ SQLite or PostgreSQL (Supabase) support
+- 🚀 Frontend deployment with Vercel
+- 🖥️ GPU backend deployment on RunPod, Vast.ai, Lambda Labs, or any CUDA-enabled server
+
+---
+
+## 🏗️ System Architecture
+
+```text
+               User Prompt
+                    │
+                    ▼
+          Stable Diffusion XL
+          (Text → 2D Image)
+                    │
+                    ▼
+           Generated PNG Image
+                    │
+                    ▼
+        Tencent Hunyuan3D-2.1
+          (Image → 3D Model)
+                    │
+                    ▼
+             GLB 3D Model
+                    │
+                    ▼
+       FastAPI REST API Server
+                    │
+                    ▼
+     React + Three.js Web Viewer
+```
+
+---
+
+## 🚀 Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 19, TypeScript, Vite, Tailwind CSS, Three.js |
+| Backend | FastAPI, Pydantic v2, Uvicorn |
+| AI Models | Stable Diffusion XL, Tencent Hunyuan3D-2.1 |
+| Programming | Python, TypeScript |
+| Storage | Cloudflare R2 (Optional) |
+| Database | SQLite / PostgreSQL (Supabase) |
+| Deployment | Vercel + GPU Server (RunPod, Vast.ai, Lambda Labs) |
+
+---
+
+## 🎯 How It Works
+
+1. Enter a text description of the object.
+2. SDXL generates a realistic 2D reference image.
+3. Hunyuan3D converts the image into a textured 3D mesh.
+4. The backend stores the generated GLB model.
+5. The frontend continuously tracks the job status.
+6. The completed model is loaded into a real-time Three.js viewer for interaction.
 
 ---
 
