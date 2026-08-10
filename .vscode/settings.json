@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/PT3-backend/venv/Scripts/python.exe",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/PT3-backend",
+    "${workspaceFolder}/hy3dgen-src"
+  ]
+}
