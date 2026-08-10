@@ -1,0 +1,38 @@
+# Claude Code internal settings
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights — too large for git
+models/
+
+# Backend outputs
+PT3-backend/data/
+PT3-backend/benchmark_runs/
+PT3-backend/output/
+
+# Python
+__pycache__/
+*.pyc
+PT3-backend/venv/
+
+# Hunyuan3D-2 source clone (installed editable into venv, not tracked)
+hy3dgen-src/
+
+# Frontend
+PT3-frontend/node_modules/
+PT3-frontend/dist/
+
+# Secrets / environment files (contain IPs, tokens, ports)
+.env
+.env.local
+.env.cloud
+*.env
+
+# Misc
+logs/
+*.log
+"New Text Document.txt"
+New Text Document.txt

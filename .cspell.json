@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "words": [
+    "SDXL", "sdxl",
+    "Hunyuan", "hunyuan",
+    "prompto3d", "prompto",
+    "torchvision",
+    "diffusers",
+    "safetensors",
+    "accelerate",
+    "uvicorn",
+    "pydantic",
+    "venv",
+    "CUDA", "cuda",
+    "gltf", "GLB", "glb",
+    "gltf-binary",
+    "gradio",
+    "rembg",
+    "HMR",
+    "Vite",
+    "gitignored"
+  ]
+}
